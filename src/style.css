@@ -1,0 +1,10 @@
+@font-face {
+    font-family: niceFontRegular;
+    src: url("./B612Mono-Regular.ttf");
+}
+
+p {
+
+    font-family: niceFontRegular;
+    font-size: 10rem;
+}
