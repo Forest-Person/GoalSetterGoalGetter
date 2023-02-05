@@ -3,8 +3,19 @@
     src: url("./B612Mono-Regular.ttf");
 }
 
-p {
+@font-face {
+    font-family: niceFontBold;
+    src: url(B612Mono-Bold.ttf);
+}
 
+header {
+
+    font-family: niceFontBold;
+    font-size: 2rem;
+}
+
+.navigationMenu ul{
+
+    list-style: none;
     font-family: niceFontRegular;
-    font-size: 10rem;
 }
