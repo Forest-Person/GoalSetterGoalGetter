@@ -25,4 +25,6 @@ deleteTodoItem('pongpong','pooping')
 
 addTodoItem('pongpong','pooped for the very first time','pooped every today','11/22/1989','high')
 
+project.editProjectDescription('pongpong','This is the way we do it')
+
 console.log(JSON.parse(localStorage.getItem('projectArray')))
