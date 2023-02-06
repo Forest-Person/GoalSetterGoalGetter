@@ -12,5 +12,10 @@ const project = projectManager()
 project.createProject('play','playing')
 project.createProject('anotherONE','doing it again')
 
+console.log(JSON.parse(localStorage.getItem('projectArray')))
 
+project.deleteProject('play')
+//project.deleteProject('anotherONE')
+project.createProject('pongpong','jongjong')
 
+console.log(JSON.parse(localStorage.getItem('projectArray')))
