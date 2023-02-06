@@ -5,7 +5,7 @@ import { changeProjectName } from './editProjectName';
 import { editTodoDescription, editTodoName } from './editTodoListValues';
 import { deleteTodoItem } from './deleteTodoList';
 import { homePageRender } from './homePage';
-import format from 'date-fns/format';
+
 
 
 
@@ -20,5 +20,9 @@ console.log(JSON.parse(localStorage.getItem('projectArray')))
 //project.deleteProject('anotherONE')
 
 addTodoItem('pongpong','pooping','pooped every today','11/22/1989','high')
+
+deleteTodoItem('pongpong','pooping')
+
+addTodoItem('pongpong','pooped for the very first time','pooped every today','11/22/1989','high')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))
