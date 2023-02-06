@@ -14,8 +14,12 @@ project.createProject('anotherONE','doing it again')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))
 
-project.deleteProject('play')
+
 //project.deleteProject('anotherONE')
 project.createProject('pongpong','jongjong')
+project.createProject('pongpong2','jongjong2')
+project.createProject('pongpong3','jongjong3')
+
+project.deleteProject('pongpong')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))

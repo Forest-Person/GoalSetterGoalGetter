@@ -31,13 +31,19 @@ const projectManager = () => {
         const projectArray = JSON.parse(localStorage.getItem('projectArray'))
         
 
-        const index = projectArray.indexOf((key)=>key.projectName)
+        const index = projectArray.findIndex(function (key) {
+            return key.project === projectName;
+        });
 
         projectArray.splice(index,1)
 
         localStorage.setItem('projectArray',JSON.stringify(projectArray))
 
+        
+
     }
+
+    
 
 
 
