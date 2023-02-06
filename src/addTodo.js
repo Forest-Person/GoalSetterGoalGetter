@@ -1,6 +1,6 @@
 import { format } from "date-fns"
 
-function addTodoItem(projectName, nameOfTodo, descriptionOfTodo, dueDate, priority)  {
+function addTodo(projectName, nameOfTodo, descriptionOfTodo, dueDate, priority)  {
 
     
     const dateDue =new Date(dueDate)
@@ -22,4 +22,4 @@ function addTodoItem(projectName, nameOfTodo, descriptionOfTodo, dueDate, priori
     
 
 
-export { addTodoItem }
+export { addTodo }

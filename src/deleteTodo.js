@@ -1,4 +1,4 @@
-function deleteTodoItem(projectName, todoToDelete){
+function deleteTodo(projectName, todoToDelete){
 
     
     const projectArray = JSON.parse(localStorage.getItem('projectArray'))
@@ -21,4 +21,4 @@ function deleteTodoItem(projectName, todoToDelete){
 }
 
 
-export { deleteTodoItem }
+export { deleteTodo }
