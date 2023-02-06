@@ -1,16 +1,25 @@
-function deleteTodoItem(projectObject, todoToDelete){
+function deleteTodoItem(projectName, todoToDelete){
 
     
-    const index = projectObject.todo.findIndex((obj)=>
-        
-       obj[todoToDelete]
+    const projectArray = JSON.parse(localStorage.getItem('projectArray'))
 
-    )
+    for( let item of projectArray )   {
 
-        console.log(index)
+        if (item.project === projectName){
 
-        projectObject.todo.splice(-1,1)
-    
+            for(let arrayItem in item.todo){
+                if(arrayItem === todoToDelete){
+                const index = item.todo.indexOf(todoToDelete)
+                item.todo.splice(index,1)
+            }
+        }
+    }
+}
+
+    localStorage.setItem(JSON.stringify(projectArray))
+
+
+
 }
 
 

@@ -43,11 +43,27 @@ const projectManager = () => {
 
     }
 
+    const editProjectName = (projectName, newName) => {
+
+        const projectArray = JSON.parse(localStorage.getItem('projectArray'))
+        
+
+       
+        for (let object of projectArray) {
+            if (object.project === projectName) {
+                object.project = newName;
+            }
+        }
+
+        localStorage.setItem('projectArray',JSON.stringify(projectArray))
+
+    }
+
     
 
 
 
-return { createProject, deleteProject }
+return { createProject, deleteProject, editProjectName }
 
 }
 

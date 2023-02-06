@@ -5,21 +5,20 @@ import { changeProjectName } from './editProjectName';
 import { editTodoDescription, editTodoName } from './editTodoListValues';
 import { deleteTodoItem } from './deleteTodoList';
 import { homePageRender } from './homePage';
+import format from 'date-fns/format';
 
 
 
 const project = projectManager()
 project.createProject('play','playing')
-project.createProject('anotherONE','doing it again')
+project.createProject('pongpong','jongjong')
+project.createProject('pongpong2','jongjong2')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))
 
 
 //project.deleteProject('anotherONE')
-project.createProject('pongpong','jongjong')
-project.createProject('pongpong2','jongjong2')
-project.createProject('pongpong3','jongjong3')
 
-project.deleteProject('pongpong')
+addTodoItem('pongpong','pooping','pooped every today','11/22/1989','high')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))
