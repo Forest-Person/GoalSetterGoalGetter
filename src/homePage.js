@@ -33,6 +33,7 @@ const homePageString =
         <main class = 'ProjectTodoContainer'>
 
             <h2> Projects </h2>
+            
 
         </main>
 
