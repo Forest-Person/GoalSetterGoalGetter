@@ -23,7 +23,7 @@ addTodo('pongpong','pooping','pooped every today','11/22/1989','high')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))
 
-editTodoListValue('pongpong','dueDate','whoa')
+editTodoListValue('pongpong','dueDate','11/22/1944')
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))
 
