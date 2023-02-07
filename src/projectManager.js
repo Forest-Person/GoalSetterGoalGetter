@@ -43,39 +43,32 @@ const projectManager = () => {
 
     }
 
-    const editProjectName = (projectName, newName) => {
+   
+    const editProjectListValues = (projectName, valueToEdit, newValue)=>{
 
         const projectArray = JSON.parse(localStorage.getItem('projectArray'))
-        
-        for (let object of projectArray) {
-            if (object.project === projectName) {
-                object.project = newName;
-            }
-        }
 
-        localStorage.setItem('projectArray',JSON.stringify(projectArray))
+        
+
+            const index = projectArray.findIndex(function (key) {//finds index of the object in the array that contains the wanted project name
+                return key.project === projectName;
+            })
+            console.log(projectArray[index])
+
+            projectArray[index][valueToEdit] = newValue
+
+
+            
+            localStorage.setItem('projectArray',JSON.stringify(projectArray))
 
     }
-
-    const editProjectDescription = (projectName, newDescription) => {
-
-        const projectArray = JSON.parse(localStorage.getItem('projectArray'))
-        
-        for (let object of projectArray) {
-            if (object.project === projectName) {
-                object.description = newDescription;
-            }
-        }
-
-        localStorage.setItem('projectArray',JSON.stringify(projectArray))
-
-    }
+    
 
     
 
 
 
-return { createProject, deleteProject, editProjectName, editProjectDescription }
+return { createProject, deleteProject ,editProjectListValues}
 
 }
 
