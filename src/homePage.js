@@ -1,5 +1,8 @@
 function homePageRender() {
 
+const projectStorage = JSON.parse(localStorage.getItem('projectArray'))
+
+
 
 const content = document.querySelector('#content')
 
@@ -24,15 +27,16 @@ const homePageString =
 
             </nav>
 
-        <aside class = 'addProject'>
-
-            <button class = 'addProjectButton'>NEW</button>
         
-        </aside>
 
         <main class = 'ProjectTodoContainer'>
 
             <h2> Projects </h2>
+
+            <div id = 'projectDiv'>
+            
+            </div>
+            
             
 
         </main>
@@ -43,6 +47,15 @@ const homePageString =
 content.insertAdjacentHTML('afterbegin', homePageString)
 
 
+for(let obj of projectStorage){
+    if( obj.project){
+
+      let newElement =  document.createElement('p')
+        newElement.textContent ='Project Name: ' + obj.project
+      let projectDiv = document.querySelector('#projectDiv')
+      projectDiv.appendChild(newElement)}
+
+}
 
 }
 
