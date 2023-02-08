@@ -5,6 +5,15 @@ padding: 0;
 margin: 0;
 
 
+}
+
+:root {
+
+    --darkBlue:rgba(70,70,96,1.000);
+    --tealGreen:rgba(54,139,133,1.000);
+    --beige:rgba(180,184,151,1.000);
+    --grey:	rgba(241,233,229,1.000);
+
 
 }
 
@@ -19,6 +28,9 @@ margin: 0;
     src: url(B612Mono-Bold.ttf);
 }
 
+
+
+
 header {
 
     font-family: niceFontBold;
@@ -26,14 +38,23 @@ header {
     grid-area: header;
     display:flex;
     min-width: 0;
-    
+    background:var(--darkBlue)
 }
-.headerTitle, h1 {
+.header {
 
     justify-content: center;
     align-items: center;
     
+    
 }
+
+.headerTitle{
+background: var(--grey);
+
+
+} 
+
+
 
 .navigationMenu ul{
 
@@ -41,7 +62,15 @@ header {
     font-family: niceFontRegular;
     padding-left: 0;
     
+    
+    
 }
+
+.navigationMenu span{
+    background: var(--grey);
+
+}
+
 
 #content {
     display: grid;
@@ -61,6 +90,8 @@ header {
   nav {
     grid-area: nav;
     min-width: 0;
+    background: var(--tealGreen);
+    padding:1rem;
     
 
   }
@@ -69,5 +100,12 @@ header {
     padding:1rem;
     grid-area: main;
     min-width: 0;
+    background: var(--beige);
 
+  }
+
+  .projectTodoContainer h2{
+
+    background: var(--grey);
+    display: flex;
   }

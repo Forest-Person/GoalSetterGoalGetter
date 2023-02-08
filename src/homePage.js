@@ -11,25 +11,25 @@ content.replaceChildren()
 const homePageString = 
         `
 
-        <header class = 'headerTitle'>
+        <header class = 'header'>
             
-            <h1> Goal Setter Goal Getter </h1>
+            <h1 class = 'headerTitle'> Goal Setter Goal Getter </h1>
 
         </header>
 
             <nav class = 'navigationMenu'>
 
-                <ul>
+                <span><ul>
 
-                <li> View Projects </li>
+                <li><span> View Projects</span> </li>
 
                 </ul>
 
-            </nav>
+            </span></nav>
 
         
 
-        <main class = 'ProjectTodoContainer'>
+        <main class = 'projectTodoContainer'>
 
             <h2> Projects </h2>
 
