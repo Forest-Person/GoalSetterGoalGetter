@@ -33,7 +33,7 @@ const homePageString =
 
             <h2> <span>  Projects  </span> </h2>
 
-            <div id = 'projectDiv'>
+            <div class = 'projectsDiv'>
             
             </div>
             
@@ -50,10 +50,21 @@ content.insertAdjacentHTML('afterbegin', homePageString)
 for(let obj of projectStorage){
     if( obj.project){
 
-      let newElement =  document.createElement('p')
-        newElement.textContent ='Project Name: ' + obj.project
-      let projectDiv = document.querySelector('#projectDiv')
-      projectDiv.appendChild(newElement)}
+        let projectName =  document.createElement('h3')
+          projectName.textContent ='Project Name: ' + obj.project
+        let projectDescription = document.createElement('p')
+            projectDescription.textContent = 'Description: ' + obj.description
+        let indiviualProjectContainer = document.createElement('div')
+            indiviualProjectContainer.classList.add('individualProjectContainer')
+        indiviualProjectContainer.append(projectName,projectDescription)
+      
+        let projectDiv = document.querySelector('.projectsDiv')
+      
+      
+        projectDiv.appendChild(indiviualProjectContainer)
+    
+    
+    }
 
 }
 
