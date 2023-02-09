@@ -21,7 +21,7 @@ const homePageString =
 
                 <span><ul>
 
-                <li><span> View Projects</span> </li>
+                <li> <span> View Projects </span> </li>
 
                 </ul>
 
@@ -31,7 +31,7 @@ const homePageString =
 
         <main class = 'projectTodoContainer'>
 
-            <h2> Projects </h2>
+            <h2> <span>  Projects  </span> </h2>
 
             <div id = 'projectDiv'>
             
