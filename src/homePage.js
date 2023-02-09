@@ -54,33 +54,39 @@ for(let obj of projectStorage){
 
       const  htmlIndividualProjectString = `
 
-<div class = 'individualProjectContainer'>
+            <div class = 'individualProjectContainer'>
+
+            <div>
+
+            <div class = 'projectContainerButtons'>
+                <button class = 'editButton'> ... </button>
+                <button class = 'deleteButton'> - </button>
+            </div>
+
+            <h3>${obj.project}</h3>
 
 
+            </div>
 
-<div projectContainerButtonTitleContainer>
+            <p>${obj.description}</p>
 
-<div class = 'projectContainerButtons'>
-<button > ... </button>
-<button> - </button>
-</div>
+            </div>
 
-<h3>${obj.project}</h3>
-
-
-</div>
-
-<p>${obj.description}</p>
-
-</div>
-
-
-
-`
+            `
 
     
     
     const projectsDiv = document.querySelector('.projectsDiv')
+    projectsDiv.addEventListener('click', (event)=>{
+
+        if (event.target.className === 'deleteButton'){
+            
+
+          const nearestProjectAParentContainer = event.target.parentElement.closest('.individualProjectContainer')
+          nearestProjectAParentContainer.remove()
+        }
+
+    })
     projectsDiv.insertAdjacentHTML('afterbegin', htmlIndividualProjectString)
 }
 
