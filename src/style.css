@@ -137,6 +137,7 @@ padding:.5rem;
     flex-direction: column;
     
     
+    
    
 
 
@@ -147,7 +148,15 @@ padding:.5rem;
     background: var(--grey);
     padding:.5rem;
     border: 2px solid var(--darkBlue);
+    font-size: 3rem;
+    border-radius: 15px;
     
+  }
+
+  .projectTodoContainer h2 {
+
+    display: flex;
+    justify-content: center;
   }
 
   .individualProjectContainer {
@@ -155,10 +164,8 @@ padding:.5rem;
     background: var(--grey);
     padding:.5rem;
     border: 1px solid var(--darkBlue);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     
   }
 
@@ -171,6 +178,13 @@ padding:.5rem;
     gap:1rem;
 
   }
+
+  .projectsDiv h3{
+
+    font-size: 1.5rem;
+  }
+
+
 
   
 

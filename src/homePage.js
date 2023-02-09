@@ -51,12 +51,14 @@ for(let obj of projectStorage){
     if( obj.project){
 
         let projectName =  document.createElement('h3')
-          projectName.textContent ='Project Name: ' + obj.project
+            projectName.textContent = obj.project
+
         let projectDescription = document.createElement('p')
-            projectDescription.textContent = 'Description: ' + obj.description
+            projectDescription.textContent = obj.description
+
         let indiviualProjectContainer = document.createElement('div')
             indiviualProjectContainer.classList.add('individualProjectContainer')
-        indiviualProjectContainer.append(projectName,projectDescription)
+            indiviualProjectContainer.append(projectName,projectDescription)
       
         let projectDiv = document.querySelector('.projectsDiv')
       
