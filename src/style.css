@@ -163,6 +163,7 @@ padding:.5rem;
 
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 
   .individualProjectContainer {
@@ -178,7 +179,7 @@ padding:.5rem;
 
   .projectsDiv {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
     grid-template-rows: auto;
     gap:1rem;
 
@@ -198,19 +199,21 @@ padding:.5rem;
     padding-top: .5rem;
   }
 
+  
+
   .projectContainerButtons {
 
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    justify-self: flex-end;
+    
     gap:.5rem;
     
   }
 
   .projectContainerButtons button{
 display: flex;
-
+justify-items: center;
 font-size: 2rem;
 
 

@@ -55,13 +55,13 @@ for(let obj of projectStorage){
       const  htmlIndividualProjectString = `
 
             <div class = 'individualProjectContainer'>
-
+            <div class = 'projectContainerButtons'>
+            <button class = 'editButton' title = 'Edit Project'>...</button>
+            <button class = 'deleteButton' title = 'Delete Project'>-</button>
+        </div>
             <div>
 
-            <div class = 'projectContainerButtons'>
-                <button class = 'editButton'> ... </button>
-                <button class = 'deleteButton'> - </button>
-            </div>
+            
 
             <h3>${obj.project}</h3>
 
