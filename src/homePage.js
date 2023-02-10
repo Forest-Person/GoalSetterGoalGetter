@@ -9,6 +9,7 @@ const content = document.querySelector('#content')
 content.replaceChildren()
 
 const homePageString = 
+        
         `
 
         <header class = 'header'>
@@ -37,7 +38,7 @@ const homePageString =
 
             <div class = 'addProjectButtonDiv'>
 
-                <button > + </button>
+                <button class = 'addProjectButton' > + </button>
 
             </div>
 

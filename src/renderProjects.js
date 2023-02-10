@@ -3,7 +3,7 @@ import { deleteProject, projectManager } from './projectManager'
 
 const renderProjects = (storage) => {
 
-    const project = new projectManager()
+    const project = projectManager()
 
 if (storage !== null){
 
@@ -52,6 +52,7 @@ if (storage !== null){
                 nearestProjectParentContainer.remove()
             }
         })
+        
 
     }
 

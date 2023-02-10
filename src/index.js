@@ -3,6 +3,7 @@ import { projectManager } from './projectManager';
 import { todoManager } from './todoManager'
 
 import { homePageRender } from './homePage';
+import { addProjectPopupForm } from './AddProjectFormPopup.js'
 
 
 
@@ -10,18 +11,21 @@ import { homePageRender } from './homePage';
 
 
 
-
-const project = new projectManager()
+const project = projectManager()
 
 project.createProject('seeing paris','best trip in town')
 
 
 
-const newTodo = new todoManager()
+const newTodo = todoManager()
 
 newTodo.addTodo('seeing paris','best pooping', 'great view','12/14/1986','high')
 
 homePageRender()
+
+addProjectPopupForm()
+
+
 
 
 console.log(JSON.parse(localStorage.getItem('projectArray')))

@@ -168,17 +168,18 @@ padding:.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding-bottom: 1rem;
   }
 
-  .addProjectButtonDiv button {
+  .addProjectButton {
     display: flex;
     padding-top:0;
     justify-content: center;
     width: 79px;
     font-size: 4rem;
-    margin: 0;
-    align-items: center !important;
+    margin-top: 1rem;
+    
     
   }
 
@@ -242,6 +243,55 @@ font-size: 2rem;
   }
 
 
+  
+  .addProjectInputs {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:.5rem;
+    
+
+  }
+
+  .projectPopupFormContainer {
+    
+    
+    display:flex;
+    width:350px;
+    height:auto;
+    justify-content: center;
+    
+
+  }
+
+  .projectForm h1 {
+
+display:flex;
+justify-content: center;
+
+
+  }
+
+  .projectFormButtons {
+display: flex;
+justify-content: center;
+gap:1rem;
+padding:1.5rem;
+
+  }
+  .projectForm {
+
+    padding:1rem;
+    background: var(--darkBlue);
+  }
+
+ 
+  
+  
+  
+  
+  
   @media only screen and (max-width: 600px) {
     
 
@@ -264,6 +314,8 @@ font-size: 2rem;
 
 
   } 
+
+
 
   
 
