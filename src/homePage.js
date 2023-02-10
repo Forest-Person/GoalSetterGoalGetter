@@ -1,8 +1,10 @@
+import { deleteProject, projectManager } from './projectManager'
+
 function homePageRender() {
 
 const projectStorage = JSON.parse(localStorage.getItem('projectArray'))
 
-
+const project = new projectManager()
 
 const content = document.querySelector('#content')
 
@@ -47,14 +49,14 @@ const homePageString =
 content.insertAdjacentHTML('afterbegin', homePageString)
 
 
-
+if (projectStorage !== null){
 
 for(let obj of projectStorage){
     
 
       const  htmlIndividualProjectString = `
 
-            <div class = 'individualProjectContainer'>
+            <div class = 'individualProjectContainer' data-project-name = ${obj.project}>
             <div class = 'projectContainerButtons'>
             <button class = 'editButton' title = 'Edit Project'>...</button>
             <button class = 'deleteButton' title = 'Delete Project'>-</button>
@@ -75,21 +77,34 @@ for(let obj of projectStorage){
             `
 
     
+            const projectsDiv = document.querySelector('.projectsDiv')
+            projectsDiv.insertAdjacentHTML('afterbegin', htmlIndividualProjectString)
+    }
+}
+
     
-    const projectsDiv = document.querySelector('.projectsDiv')
+
+    const projectsDiv = document.querySelector('.projectsDiv') //Event delegation on the projects div element to click on delete button removes the project
     projectsDiv.addEventListener('click', (event)=>{
 
         if (event.target.className === 'deleteButton'){
             
-
-          const nearestProjectAParentContainer = event.target.parentElement.closest('.individualProjectContainer')
-          nearestProjectAParentContainer.remove()
+            
+            const nearestProjectParentContainer = event.target.parentElement.closest('.individualProjectContainer')
+            const projectNameOfContainer = nearestProjectParentContainer.dataset.projectName
+            project.deleteProject(projectNameOfContainer)
+            nearestProjectParentContainer.remove()
         }
-
     })
-    projectsDiv.insertAdjacentHTML('afterbegin', htmlIndividualProjectString)
+
+    
 }
 
-}
+
+
+
+
+
+
 
 export { homePageRender }
