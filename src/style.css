@@ -163,6 +163,24 @@ padding:.5rem;
     text-align: center;
   }
 
+  .addProjectButtonDiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .addProjectButtonDiv button {
+    display: flex;
+    
+    justify-content: center;
+    width: 79px;
+    font-size: 4rem;
+    margin: 0;
+    
+  }
+
   .individualProjectContainer {
     
     background: var(--grey);

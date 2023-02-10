@@ -33,8 +33,17 @@ const homePageString =
 
         <main class = 'projectTodoContainer'>
 
+            
+
             <h2> <span>  Projects  </span> </h2>
 
+            <div class = 'addProjectButtonDiv'>
+
+                <button > + </button>
+
+            </div>
+
+            
             <div class = 'projectsDiv'>
             
             </div>
