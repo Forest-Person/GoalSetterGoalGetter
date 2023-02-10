@@ -173,11 +173,12 @@ padding:.5rem;
 
   .addProjectButtonDiv button {
     display: flex;
-    
+    padding-top:0;
     justify-content: center;
     width: 79px;
     font-size: 4rem;
     margin: 0;
+    align-items: center !important;
     
   }
 
