@@ -32,8 +32,8 @@ const addProjectPopupForm = () => {
                 <div class = 'projectFormButtons'>
 
 
-                    <button>Add Project</button>
-                    <button>Cancel</button>
+                    <button type = 'button'>Add Project</button>
+                    <button type = 'button'>Cancel</button>
 
 
                 </div>
