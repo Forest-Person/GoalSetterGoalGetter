@@ -170,6 +170,7 @@ padding:.5rem;
     align-items: center;
     flex-direction: column;
     padding-bottom: 1rem;
+    padding-top:2rem;
   }
 
   .addProjectButton {
@@ -254,6 +255,11 @@ font-size: 2rem;
 
   }
 
+  .addProjectInputs input {
+
+    width: 9rem;
+  }
+
   .projectPopupFormContainer {
     
     
@@ -262,6 +268,7 @@ font-size: 2rem;
     height:auto;
     justify-content: center;
     
+    
 
   }
 
@@ -269,6 +276,7 @@ font-size: 2rem;
 
 display:flex;
 justify-content: center;
+background: var(--grey);
 
 
   }
@@ -284,6 +292,13 @@ padding:1.5rem;
 
     padding:1rem;
     background: var(--darkBlue);
+    border-radius: 35px;
+  }
+
+  .projectForm label {
+
+
+    background: var(--grey);
   }
 
  

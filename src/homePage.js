@@ -57,6 +57,7 @@ const homePageString =
 content.insertAdjacentHTML('afterbegin', homePageString)
 
 renderProjects(projectStorage)
+
     
 }
 

@@ -3,7 +3,7 @@ const addProjectPopupForm = () => {
 
     const addProjectButtonSection = document.querySelector('.addProjectButtonDiv')
 
-  const addProjectFormHtmlString = `
+    const addProjectFormHtmlString = `
     
         <div class = 'projectPopupFormContainer' >
             <form class = 'projectForm'>
@@ -24,7 +24,7 @@ const addProjectPopupForm = () => {
 
                 <div class = 'addProjectInputs'>
                     
-                    <label for = 'projectDescription'> Description: </label>
+                    <label for = 'projectDescription'> Goal: </label>
                     <input type = 'text' name = 'projectDescription'>
 
                 </div>

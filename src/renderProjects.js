@@ -2,8 +2,10 @@ import { deleteProject, projectManager } from './projectManager'
 
 
 const renderProjects = (storage) => {
+    
 
     const project = projectManager()
+    //projectsDiv.replaceChildren()
 
 if (storage !== null){
 
