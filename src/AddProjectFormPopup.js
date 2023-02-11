@@ -67,7 +67,21 @@ const addProjectPopupForm = () => {
       
         
     })
+
     
+
+    const cancelButtonPressed = document.querySelector('.cancelAddProjectButtonPressed')
+
+    const projectPopupFormContainer = document.querySelector('.projectPopupFormContainer')
+
+    const getProjectPopUpForm = document.querySelector('.addProjectButtonDiv')
+
+
+    cancelButtonPressed.addEventListener('click', ()=>
+    
+    getProjectPopUpForm.removeChild(projectPopupFormContainer)
+
+    )
     
 }
 
