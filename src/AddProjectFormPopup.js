@@ -63,7 +63,7 @@ const addProjectPopupForm = () => {
 
       project.createProject(projectNameValue,projectDescriptionValue)
 
-       homePageRender()
+       homePageRender()//calling the home page render funciton renders the new page without the project add form popup
       
         
     })

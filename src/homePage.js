@@ -62,11 +62,18 @@ renderProjects(projectStorage)
 const addProjectButton = document.querySelector('.addProjectButton') ///add event listener to plus sign add project button to bring up add project form.
 
 
-addProjectButton.addEventListener('click',
-addProjectPopupForm
+addProjectButton.addEventListener('click',()=> {
+
+
     
 
-)
+    const getProjectPopUpForm = document.querySelector('.projectPopupFormContainer')
+
+    if(!getProjectPopUpForm){
+    addProjectPopupForm()
+    }
+
+})
 
 }
 
