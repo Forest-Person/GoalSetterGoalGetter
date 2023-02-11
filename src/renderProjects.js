@@ -5,7 +5,7 @@ const renderProjects = (storage) => {
     
 
     const project = projectManager()
-    //projectsDiv.replaceChildren()
+   
 
 if (storage !== null){
 
@@ -47,7 +47,8 @@ if (storage !== null){
     
             if (event.target.className === 'deleteButton'){
                 
-                
+                const response = confirm('Are you sure you want to delete Project?')
+                if(response === 'cancel'){return}
                 const nearestProjectParentContainer = event.target.parentElement.closest('.individualProjectContainer')
                 const projectNameOfContainer = nearestProjectParentContainer.dataset.projectName
                 project.deleteProject(projectNameOfContainer)
