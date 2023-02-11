@@ -23,7 +23,7 @@ newTodo.addTodo('seeing paris','best pooping', 'great view','12/14/1986','high')
 
 homePageRender()
 
-addProjectPopupForm()
+
 
 
 

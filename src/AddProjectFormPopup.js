@@ -1,5 +1,11 @@
+import { projectManager } from './projectManager'
+import { homePageRender } from './homePage'
 
 const addProjectPopupForm = () => {
+
+    
+
+    const project = projectManager()
 
     const addProjectButtonSection = document.querySelector('.addProjectButtonDiv')
 
@@ -18,22 +24,22 @@ const addProjectPopupForm = () => {
                 <div class = 'addProjectInputs'>
 
                     <label for = 'nameOfProject'>Name: </label>
-                    <input type = 'text' name = 'nameOfProject'>
+                    <input type = 'text' name = 'nameOfProject' class = 'addProjectInputValue' required>
 
                 </div>
 
                 <div class = 'addProjectInputs'>
                     
                     <label for = 'projectDescription'> Goal: </label>
-                    <input type = 'text' name = 'projectDescription'>
+                    <input type = 'text' name = 'projectDescription' class = 'addProjectGoalValue' required>
 
                 </div>
 
                 <div class = 'projectFormButtons'>
 
 
-                    <button type = 'button'>Add Project</button>
-                    <button type = 'button'>Cancel</button>
+                    <button type = 'button' class = 'addProjectButtonPressed'>Add Project</button>
+                    <button type = 'button' class = 'cancelAddProjectButtonPressed'>Cancel</button>
 
 
                 </div>
@@ -46,7 +52,21 @@ const addProjectPopupForm = () => {
 
     
     
-    
+    const completeAddProject = document.querySelector('.addProjectButtonPressed')
+
+    completeAddProject.addEventListener('click',()=>{
+
+
+      const projectNameValue = document.querySelector('.addProjectInputValue').value
+
+      const projectDescriptionValue = document.querySelector('.addProjectGoalValue').value
+
+      project.createProject(projectNameValue,projectDescriptionValue)
+
+       homePageRender()
+      
+        
+    })
     
     
 }
