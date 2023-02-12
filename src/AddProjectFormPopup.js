@@ -61,6 +61,8 @@ const addProjectPopupForm = () => {
 
       const projectDescriptionValue = document.querySelector('.addProjectGoalValue').value
 
+      if(projectNameValue === '' || projectDescriptionValue === ''){return}
+
       project.createProject(projectNameValue,projectDescriptionValue)
 
        homePageRender()//calling the home page render funciton renders the new page without the project add form popup
