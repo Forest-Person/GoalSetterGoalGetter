@@ -39,7 +39,7 @@ const homePageString =
 
             <div class = 'addProjectButtonDiv'>
 
-                <button class = 'addProjectButton' > + </button>
+                <button class = 'addProjectButton' title = 'Add Project' >  </button>
 
             </div>
 

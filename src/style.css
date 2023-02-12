@@ -174,15 +174,18 @@ padding:.5rem;
   }
 
   .addProjectButton {
-    display: flex;
-    padding-top:0;
-    justify-content: center;
-    width: 79px;
-    font-size: 4rem;
-    margin-top: 1rem;
+    
+      height: 6rem;
+      width: 6rem;
+      vertical-align: middle;
+       background-image: url('./images/add.png');
+       background-repeat: no-repeat;
+       background-size: contain;
+  
+    }
     
     
-  }
+  
 
   .individualProjectContainer {
     
@@ -223,9 +226,9 @@ padding:.5rem;
 
     display: flex;
     flex-direction: row;
-    justify-self: flex-end;
+    justify-self: space-around;
     
-    gap:.5rem;
+    gap:.75rem;
     
   }
 
@@ -233,8 +236,8 @@ padding:.5rem;
   .projectContainerButtons .editButton {
     
     
-   height: 4rem;
-   width: 4rem;
+   height: 3rem;
+   width: 3rem;
    vertical-align: middle;
     background-image: url('./images/edit.png');
     background-repeat: no-repeat;
@@ -243,14 +246,25 @@ padding:.5rem;
   }
 
   .projectContainerButtons .deleteButton {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     vertical-align: middle;
      background-image: url('./images/delete.png');
      background-repeat: no-repeat;
      background-size: contain;
 
   }
+
+  .projectContainerButtons .addTodoButton {
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+     background-image: url('./images/add.png');
+     background-repeat: no-repeat;
+     background-size: contain;
+
+  }
+
 
  
 
