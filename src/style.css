@@ -229,20 +229,30 @@ padding:.5rem;
     
   }
 
-  .projectContainerButtons button{
-display: flex;
-justify-items: center;
-font-size: 2rem;
 
-
-  }
-
-  .projectContainerButtons :nth-child(2){
-
+  .projectContainerButtons .editButton {
     
-    width: 2rem;
+    
+   height: 4rem;
+   width: 4rem;
+   vertical-align: middle;
+    background-image: url('./images/edit.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+   
   }
 
+  .projectContainerButtons .deleteButton {
+    height: 4rem;
+    width: 4rem;
+    vertical-align: middle;
+     background-image: url('./images/delete.png');
+     background-repeat: no-repeat;
+     background-size: contain;
+
+  }
+
+ 
 
   
   .addProjectInputs {

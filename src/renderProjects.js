@@ -16,8 +16,8 @@ if (storage !== null){
     
                 <div class = 'individualProjectContainer' data-project-name = ${obj.project}>
                 <div class = 'projectContainerButtons'>
-                <button class = 'editButton' title = 'Edit Project'>...</button>
-                <button class = 'deleteButton' title = 'Delete Project'>-</button>
+                <button class = 'editButton' title = 'Edit Project'></button>
+                <button class = 'deleteButton' title = 'Delete Project'></button>
             </div>
                 <div>
     
@@ -48,7 +48,8 @@ if (storage !== null){
             if (event.target.className === 'deleteButton'){
                 
                 const response = confirm('Are you sure you want to delete Project?')
-                if(response === 'cancel'){return}
+                if(response === false){return}
+                
                 const nearestProjectParentContainer = event.target.parentElement.closest('.individualProjectContainer')
                 const projectNameOfContainer = nearestProjectParentContainer.dataset.projectName
                 project.deleteProject(projectNameOfContainer)
