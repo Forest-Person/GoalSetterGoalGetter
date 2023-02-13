@@ -1,15 +1,16 @@
 import { renderProjects } from "./renderProjects"
 import { addProjectPopupForm } from './AddProjectFormPopup'
+import { renderEditProjectForm } from './RenderEditProject'
 
 function homePageRender() {
 
-const projectStorage = JSON.parse(localStorage.getItem('projectArray'))
+const projectStorage = JSON.parse(localStorage.getItem('projectArray')) 
 
 const content = document.querySelector('#content')
 
 content.replaceChildren()
 
-const homePageString = 
+const homePageString =  //String which will be used with addAdjacentHTML to render the home page.
         
         `
 
@@ -62,10 +63,8 @@ renderProjects(projectStorage)
 const addProjectButton = document.querySelector('.addProjectButton') ///add event listener to plus sign add project button to bring up add project form.
 
 
-addProjectButton.addEventListener('click',()=> {
+addProjectButton.addEventListener('click',()=> { //render add project popup form
 
-
-    
 
     const getProjectPopUpForm = document.querySelector('.projectPopupFormContainer')
 
@@ -74,6 +73,26 @@ addProjectButton.addEventListener('click',()=> {
     }
 
 })
+
+const projectsContainer = document.querySelector('.projectsDiv')
+
+projectsContainer.addEventListener('click', (event)=>{
+
+    
+
+    const targetDatasetName = event.target.closest('.individualProjectContainer').dataset.projectName  //gets project name of chosen individualprojectContainer
+
+    if(event.target.className === 'editButton'){
+
+    renderEditProjectForm(targetDatasetName)
+    }
+
+
+
+})
+
+
+
 
 }
 
