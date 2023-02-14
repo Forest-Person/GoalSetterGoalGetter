@@ -1,7 +1,12 @@
+import { projectManager } from "./projectManager"
+
+import { homePageRender } from "./homePage"
+
 const renderEditProjectForm = (projectName)=>{
 
+    const project = projectManager()
 
-    const projectWherePopupFormAppears = document.querySelector(`.individualProjectContainer[data-project-name =${projectName}]`)
+    const projectWherePopupFormAppears = document.querySelector(`.individualProjectContainer[data-project-name ='${projectName}']`)
     
     const projectEditFormPopupString = `
     
@@ -46,12 +51,30 @@ const renderEditProjectForm = (projectName)=>{
     
     projectWherePopupFormAppears.insertAdjacentHTML('afterbegin',projectEditFormPopupString)
     
-   
+   projectWherePopupFormAppears.addEventListener('click',(event)=> {
+
+    const editProjectNameFormButtons =  document.querySelector('.editProjectInputValue').value
+    const editProjectDescription =  document.querySelector('.editProjectGoalValue').value
+
+    if(event.target.className === 'editProjectButtonPressed'){
+
+        const newProjectName = editProjectNameFormButtons
+
+        project.editProjectListValues(projectName,'project',editProjectNameFormButtons)
+
+
+        homePageRender()
+    }
+
+
+   })
 
 
     
     
     
     }
+
     
+
     export { renderEditProjectForm }

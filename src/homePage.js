@@ -81,7 +81,7 @@ projectsContainer.addEventListener('click', (event)=>{
     
 
     const targetDatasetName = event.target.closest('.individualProjectContainer').dataset.projectName  //gets project name of chosen individualprojectContainer
-
+console.log(targetDatasetName)
     if(event.target.className === 'editButton'){
 
     renderEditProjectForm(targetDatasetName)

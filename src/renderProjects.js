@@ -14,7 +14,7 @@ if (storage !== null){
     
           const  htmlIndividualProjectString = `
     
-            <div class = 'individualProjectContainer' data-project-name = ${obj.project}>
+            <div class = 'individualProjectContainer' data-project-name = "${obj.project}">
                 
                 
                 <div>
