@@ -62,6 +62,8 @@ const renderEditProjectForm = (projectName)=>{
 
         project.editProjectListValues(projectName,'project',editProjectNameFormButtons)
 
+        project.editProjectListValues(newProjectName,'description',editProjectDescription)
+
 
         homePageRender()
     }
