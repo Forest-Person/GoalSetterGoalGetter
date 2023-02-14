@@ -6,35 +6,35 @@ const renderEditProjectForm = (projectName)=>{
     const projectEditFormPopupString = `
     
     
-    <div class = 'projectPopupFormContainer' >
-    <form class = 'projectForm'>
+    <div class = 'editProjectPopupFormContainer' >
+    <form class = 'editProjectForm'>
     
-        <div>
+        <div class = 'editProjectHeader'>
     
-            <h1>Add Project</h1>
+            <h3>Edit Project</h3>
     
         </div>
     
         
-        <div class = 'addProjectInputs'>
+        <div class = 'editProjectInputs'>
     
             <label for = 'nameOfProject'>Name: </label>
-            <input type = 'text' name = 'nameOfProject' class = 'addProjectInputValue' required>
+            <input type = 'text' name = 'nameOfProject' class = 'editProjectInputValue' required>
     
         </div>
     
-        <div class = 'addProjectInputs'>
+        <div class = 'editProjectInputs'>
             
             <label for = 'projectDescription'> Goal: </label>
-            <input type = 'text' name = 'projectDescription' class = 'addProjectGoalValue' required>
+            <input type = 'text' name = 'projectDescription' class = 'editProjectGoalValue' required>
     
         </div>
     
-        <div class = 'projectFormButtons'>
+        <div class = 'editProjectFormButtons'>
     
     
-            <button type = 'button' class = 'addProjectButtonPressed'>Add Project</button>
-            <button type = 'button' class = 'cancelAddProjectButtonPressed'>Cancel</button>
+            <button type = 'button' class = 'editProjectButtonPressed'>Edit Project</button>
+            <button type = 'button' class = 'editCancelAddProjectButtonPressed'>Cancel</button>
     
     
         </div>
@@ -46,7 +46,9 @@ const renderEditProjectForm = (projectName)=>{
     
     projectWherePopupFormAppears.insertAdjacentHTML('afterbegin',projectEditFormPopupString)
     
-    
+   
+
+
     
     
     
