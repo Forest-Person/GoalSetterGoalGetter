@@ -11,15 +11,13 @@ import { addProjectPopupForm } from './AddProjectFormPopup.js'
 
 
 
-const project = projectManager()
-
-project.createProject('seeing paris','best trip in town')
 
 
 
-const newTodo = todoManager()
 
-newTodo.addTodo('seeing paris','best pooping', 'great view','12/14/1986','high')
+
+
+
 
 homePageRender()
 
@@ -28,7 +26,7 @@ homePageRender()
 
 
 
-console.log(JSON.parse(localStorage.getItem('projectArray')))
+
 
 
 

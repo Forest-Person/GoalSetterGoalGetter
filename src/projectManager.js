@@ -16,6 +16,11 @@ const projectManager = () => {
         project:projectName,description:projectDescription,todo:new Array()
 
     }
+
+    for(let item of projectArray){
+
+        if(item.project == projectObject.project ){alert('Please create unique project name.'); return }
+    }
     projectArray.push(projectObject)
 
     localStorage.setItem('projectArray', JSON.stringify(projectArray))
