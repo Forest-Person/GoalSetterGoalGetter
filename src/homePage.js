@@ -74,19 +74,20 @@ addProjectButton.addEventListener('click',()=> { //render add project popup form
 
 })
 
-const projectsContainer = document.querySelector('.projectsDiv')
+const editButtonForProjectsContainer = document.querySelector('.projectsDiv')//render edit project name or desription popup form
 
-projectsContainer.addEventListener('click', (event)=>{
+editButtonForProjectsContainer.addEventListener('click', (event)=>{
 
     
-
+if(event.target.className !== 'editButton'){return}
+else{
     const targetDatasetName = event.target.closest('.individualProjectContainer').dataset.projectName  //gets project name of chosen individualprojectContainer
-console.log(targetDatasetName)
-    if(event.target.className === 'editButton'){
 
-    renderEditProjectForm(targetDatasetName)
-    }
-
+    const projectPopupForm = document.querySelector('.editProjectPopupFormContainer')
+    if (!projectPopupForm){
+    renderEditProjectForm(targetDatasetName)}
+    
+}
 
 
 })
