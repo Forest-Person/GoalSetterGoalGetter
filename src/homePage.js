@@ -1,6 +1,7 @@
 import { renderProjects } from "./renderProjects"
 import { addProjectPopupForm } from './AddProjectFormPopup'
 import { renderEditProjectForm } from './RenderEditProject'
+import { addTodoPopupForm } from './renderAddTodoFormPopup'
 
 function homePageRender() {
 
@@ -74,9 +75,9 @@ addProjectButton.addEventListener('click',()=> { //render add project popup form
 
 })
 
-const editButtonForProjectsContainer = document.querySelector('.projectsDiv')//render edit project name or desription popup form
+const projectsContainer = document.querySelector('.projectsDiv')//render edit project name or desription popup form
 
-editButtonForProjectsContainer.addEventListener('click', (event)=>{
+projectsContainer.addEventListener('click', (event)=>{
 
     
 if(event.target.className !== 'editButton'){return}
@@ -88,6 +89,25 @@ else{
     renderEditProjectForm(targetDatasetName)}
     
 }
+
+
+
+})
+
+
+projectsContainer.addEventListener('click', (event)=>{ //eventlistener for the add todo button
+
+    
+if(event.target.className !== 'addTodoButton'){return}
+else{
+    const targetDatasetName = event.target.closest('.individualProjectContainer').dataset.projectName  //gets project name of chosen individualprojectContainer
+
+    const todoPopupForm = document.querySelector('.todoPopupFormContainer')
+    if (!todoPopupForm){
+    addTodoPopupForm(targetDatasetName)}
+    
+}
+
 
 
 })
