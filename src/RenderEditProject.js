@@ -65,10 +65,16 @@ const renderEditProjectForm = (projectName)=>{
         project.editProjectListValues(newProjectName,'description',editProjectDescription)
 
 
+    
+
+
         homePageRender()
     }
 
+    if (event.target.className === 'editCancelAddProjectButtonPressed'){
 
+        projectWherePopupFormAppears.removeChild(document.querySelector('.editProjectPopupFormContainer'))
+    }
    })
 
 
