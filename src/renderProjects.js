@@ -38,7 +38,26 @@ if (storage !== null){
         
                 const projectsDiv = document.querySelector('.projectsDiv')
                 projectsDiv.insertAdjacentHTML('afterbegin', htmlIndividualProjectString)
+
+            for(let item of obj.todo){
+
+
+                const todoItemHtmlString = `
+                
+                <div class = 'todoRenderDiv'>
+                
+                <h3>Todo: ${item.title}<h3>
+                
+                
+                
+                
+                `
+                const individualProjectRender = document.querySelector('.individualProjectContainer')
+                individualProjectRender.insertAdjacentHTML('beforeend',todoItemHtmlString)
+            }
         }
+
+
     }
     
         
