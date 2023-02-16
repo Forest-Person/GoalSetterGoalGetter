@@ -17,7 +17,7 @@ const addTodoPopupForm = (projectName)=> {
                 
 
                 
-                    <form class = 'todoForm>
+                    <form class = 'todoForm'>
                         <div>
                             <label for = 'todoName'>To do:</label>
                             <input type = 'text' name = 'todoName'>
@@ -25,12 +25,12 @@ const addTodoPopupForm = (projectName)=> {
 
                         <div>
                             <label for = "todoDescription">Description:</label>
-                            <input type = "text" name = 'todoDescription>
+                            <input type = "text" name = 'todoDescription'>
                         </div>
 
                         <div>
                             <label for = "dueDateOfTodo">Due Date:</label>
-                            <input type 'date' name = 'dueDateOfTodo'>
+                            <input type = "date" name = 'dueDateOfTodo'>
                         </div>
 
                         <div>
