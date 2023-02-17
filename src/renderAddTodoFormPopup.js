@@ -76,6 +76,7 @@ todoPopupFormContainerDiv.addEventListener('click', (event)=> {
 
         todo.addTodo(projectName,todoName,todoDescription,todoDueDate,todoPriority)
         todoPopupFormContainer.removeChild(todoPopupFormContainerDiv)
+        homePageRender()
 
     }
 
