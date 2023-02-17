@@ -16,8 +16,14 @@ if (storage !== null){
     
             <div class = 'individualProjectContainer' data-project-name = "${obj.project}">
                 
+            <div class = 'projectContainerButtons'>
+                    <button class = 'addTodoButton' title = 'Add todo'></button>
+                    <button class = 'editButton' title = 'Edit Project'></button>
+                    <button class = 'deleteButton' title = 'Delete Project'></button>
+                </div>    
                 
-                <div>
+            
+            <div>
     
                     <h3>${obj.project}</h3>
     
@@ -25,11 +31,7 @@ if (storage !== null){
     
                     <p>${obj.description}</p>
 
-                    <div class = 'projectContainerButtons'>
-                    <button class = 'addTodoButton' title = 'Add todo'></button>
-                    <button class = 'editButton' title = 'Edit Project'></button>
-                    <button class = 'deleteButton' title = 'Delete Project'></button>
-                </div>
+                
     
             </div>
     
@@ -46,10 +48,13 @@ if (storage !== null){
                 
                 <div class = 'todoRenderDiv'>
                 
-                <h3>Todo: ${item.title}<h3>
+                    <div class = 'todoTitleAndExpandButton'>
+                    <h6>Todo: ${item.title}<h6>
+                    <button class = 'todoExpandButton' type = 'button'></button>
+                    </div>
                 
                 
-                
+                </div>
                 
                 `
                 const individualProjectRender = document.querySelector('.individualProjectContainer')

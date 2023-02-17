@@ -226,7 +226,7 @@ padding:.5rem;
 
     display: flex;
     flex-direction: row;
-    justify-self: space-around;
+    justify-self: space-between;
     
     gap:.75rem;
     
@@ -236,8 +236,8 @@ padding:.5rem;
   .projectContainerButtons .editButton {
     
     
-   height: 3rem;
-   width: 3rem;
+   height: 2rem;
+   width: 2rem;
    vertical-align: middle;
     background-image: url('./images/edit.png');
     background-repeat: no-repeat;
@@ -246,8 +246,8 @@ padding:.5rem;
   }
 
   .projectContainerButtons .deleteButton {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     vertical-align: middle;
      background-image: url('./images/delete.png');
      background-repeat: no-repeat;
@@ -256,8 +256,8 @@ padding:.5rem;
   }
 
   .projectContainerButtons .addTodoButton {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     vertical-align: middle;
      background-image: url('./images/add.png');
      background-repeat: no-repeat;
@@ -331,6 +331,34 @@ padding:1.5rem;
     margin-bottom:2rem;
 
 
+  }
+
+  .todoExpandButton {
+
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+     background-image: url('./images/expand.png');
+     background-repeat: no-repeat;
+     background-size: contain;
+
+
+  }
+
+  .todoTitleAndExpandButton {
+
+    display:flex;
+    flex-direction: row;
+    gap:.5rem;
+   
+    border-top: 2px solid black;
+
+
+  }
+
+  .todoTitleAndExpandButton, h6 {
+
+    
   }
   
   
