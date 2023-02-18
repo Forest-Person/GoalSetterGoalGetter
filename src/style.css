@@ -337,7 +337,7 @@ padding:1.5rem;
 
     height: 1.5rem;
     width: 1.5rem;
-    vertical-align: middle;
+    
      background-image: url('./images/expand.png');
      background-repeat: no-repeat;
      background-size: contain;
@@ -345,20 +345,24 @@ padding:1.5rem;
 
   }
 
-  .todoTitleAndExpandButton {
+  .todoTitleAndExpandButton{
 
     display:flex;
     flex-direction: row;
     gap:.5rem;
+    justify-content: center;
+    align-items: center;
    
     border-top: 2px solid black;
 
 
   }
 
-  .todoTitleAndExpandButton, h6 {
+  .todoInformation p{ 
 
-    
+    font-size: 1rem;
+
+
   }
   
   

@@ -1,3 +1,4 @@
+
 import { deleteProject, projectManager } from './projectManager'
 
 
@@ -5,6 +6,7 @@ const renderProjects = (storage) => {
     
 
     const project = projectManager()
+    
    
 
 if (storage !== null){
@@ -26,10 +28,10 @@ if (storage !== null){
             <div>
     
                     <h3>${obj.project}</h3>
-    
+                    <p>${obj.description}</p>
                 </div>
     
-                    <p>${obj.description}</p>
+                    
 
                 
     
@@ -41,17 +43,30 @@ if (storage !== null){
                 const projectsDiv = document.querySelector('.projectsDiv')
                 projectsDiv.insertAdjacentHTML('afterbegin', htmlIndividualProjectString)
 
+                
+
             for(let item of obj.todo){
 
 
                 const todoItemHtmlString = `
                 
-                <div class = 'todoRenderDiv'>
+                <div class = 'todoRenderDiv'  >
                 
-                    <div class = 'todoTitleAndExpandButton'>
-                    <h6>Todo: ${item.title}<h6>
-                    <button class = 'todoExpandButton' type = 'button'></button>
+                    <div class = 'todoTitleAndExpandButton' data-todo-title-name = "${item.title}">
+                        
+                        <h6>Todo: ${item.title}</h6>
+                        <button class = 'todoExpandButton' type = 'button' ></button>
+                    
                     </div>
+
+                    
+                    <div class = 'todoInformation' data-todo-title-name = "${item.title}">
+
+                        <p> What: ${item.description} </p>
+                        <p> When: ${item.dueDate} </p>
+                        <p> Priority: ${item.priority} </p>
+                    </div>
+                    
                 
                 
                 </div>
@@ -59,14 +74,32 @@ if (storage !== null){
                 `
                 const individualProjectRender = document.querySelector('.individualProjectContainer')
                 individualProjectRender.insertAdjacentHTML('beforeend',todoItemHtmlString)
+                 
+                
+                
             }
+            
         }
-
-
+        
+        
     }
     
         
     
+    const todoRender = document.querySelector('.projectsDiv')
+    todoRender.addEventListener('click', (event)=>{
+
+
+        if(event.target.className === 'todoExpandButton'){
+            
+           const targetDatasetProjectName = event.target.closest('.todoTitleAndExpandButton').dataset.todoTitleName
+           const todoInformationtoHide = document.querySelector(`.todoInformation[data-todo-title-name = "${targetDatasetProjectName}"]`)
+            todoInformationtoHide.style.cssText = "display:none"
+           console.log(todoInformationtoHide)
+        }
+
+        })
+
         const projectsDiv = document.querySelector('.projectsDiv') //Event delegation on the projects div element to click on delete button removes the project
         projectsDiv.addEventListener('click', (event)=>{
     
@@ -80,7 +113,12 @@ if (storage !== null){
                 project.deleteProject(projectNameOfContainer)
                 nearestProjectParentContainer.remove()
             }
+
+            
         })
+
+        
+
         
 
     }
