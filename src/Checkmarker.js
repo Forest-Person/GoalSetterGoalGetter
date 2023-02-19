@@ -4,6 +4,9 @@ import { homePageRender } from "./homePage";
 
 const checkMarker = (projectName, todoName) => {
 
+    
+    const modifyCheckBoxCheck = document.querySelector(`.todoCheckBox[data-todo-title-name = '${todoName}']`)
+        
 
     const projectArray = JSON.parse(localStorage.getItem('projectArray'))
 
@@ -19,15 +22,19 @@ const checkMarker = (projectName, todoName) => {
        
    if(projectArray[index].todo[todoIndex].status === false){
     projectArray[index].todo[todoIndex].status = true
-
+    modifyCheckBoxCheck.checked = true
+    
+    
    }else if(projectArray[index].todo[todoIndex].status === true){
 
     projectArray[index].todo[todoIndex].status = false
+   modifyCheckBoxCheck.checked = false
+    
 
    }
-    
+   
      console.log(projectArray[index].todo[todoIndex].status)   
-     console.log(projectArray[index].todo)
+     
         
     }
 

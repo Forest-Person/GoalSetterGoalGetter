@@ -1,5 +1,7 @@
 
 import { deleteProject, projectManager } from './projectManager'
+import { checkMarker } from './Checkmarker'
+import { homePageRender } from './homePage'
 
 
 const renderProjects = (storage) => {
@@ -57,7 +59,7 @@ if (storage !== null){
                     <div class = 'todoButtons'>
                         <button class = 'todoExpandButton' type = 'button' ></button>
                         <button class = 'todoDeleteButton'></button>
-                        <input class = 'todoCheckBox' type = "checkbox">
+                        <input class = 'todoCheckBox' type = "checkbox" data-todo-title-name = "${item.title}" >
                     </div>
                     
                         
@@ -84,7 +86,9 @@ if (storage !== null){
                 `
                 const individualProjectRender = document.querySelector('.individualProjectContainer')
                 individualProjectRender.insertAdjacentHTML('beforeend',todoItemHtmlString)
-                 
+                const todoCheck = document.querySelector(`.todoCheckBox[data-todo-title-name = "${item.title}"]`)
+                todoCheck.checked = item.status
+                console.log(item.status)
                 
                 
             }
@@ -93,8 +97,8 @@ if (storage !== null){
         
         
     }
-    
-        
+
+
     
     const todoRender = document.querySelector('.projectsDiv')
     todoRender.addEventListener('click', (event)=>{
@@ -133,6 +137,8 @@ if (storage !== null){
 
         
 
+       
+        
         
 
     }

@@ -2,6 +2,7 @@ import { renderProjects } from "./renderProjects"
 import { addProjectPopupForm } from './AddProjectFormPopup'
 import { renderEditProjectForm } from './RenderEditProject'
 import { addTodoPopupForm } from './renderAddTodoFormPopup'
+import { checkMarker } from './Checkmarker'
 
 function homePageRender() {
 
@@ -112,6 +113,26 @@ else{
 
 })
 
+
+projectsContainer.addEventListener('click', (event)=>{
+
+    if (event.target.className === 'todoCheckBox') {
+
+        const nearestTodoTitleDiv = event.target.closest('.todoTitleAndExpandButton')
+        const titleOfTodo = nearestTodoTitleDiv.dataset.todoTitleName
+        const nearestIndividualContainerDiv = event.target.closest('.individualProjectContainer')
+        const titleOfIndividualProjectName = nearestIndividualContainerDiv.dataset.projectName
+        checkMarker(titleOfIndividualProjectName,titleOfTodo)
+        
+        
+        
+
+    }
+
+
+
+
+})
 
 
 

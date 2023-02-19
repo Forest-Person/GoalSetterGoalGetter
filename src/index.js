@@ -8,7 +8,7 @@ import { checkMarker } from './Checkmarker'
 
 
 
-checkMarker('poop','poop')
+//checkMarker('poop','poop')
 
 
 
