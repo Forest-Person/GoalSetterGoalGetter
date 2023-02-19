@@ -88,7 +88,7 @@ if (storage !== null){
                 individualProjectRender.insertAdjacentHTML('beforeend',todoItemHtmlString)
                 const todoCheck = document.querySelector(`.todoCheckBox[data-todo-title-name = "${item.title}"]`)
                 todoCheck.checked = item.status
-                console.log(item.status)
+                
                 
                 
             }
@@ -113,7 +113,7 @@ if (storage !== null){
             }else if(todoInformationtoHide.style.display !== 'block'){
                 todoInformationtoHide.style.display = 'block'
             }
-           console.log(todoInformationtoHide)
+           
         }
 
         })

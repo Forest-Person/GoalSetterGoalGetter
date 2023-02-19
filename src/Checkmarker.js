@@ -33,7 +33,7 @@ const checkMarker = (projectName, todoName) => {
 
    }
    
-     console.log(projectArray[index].todo[todoIndex].status)   
+       
      
         
     }
