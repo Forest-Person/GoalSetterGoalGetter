@@ -54,9 +54,16 @@ if (storage !== null){
                 
                     <div class = 'todoTitleAndExpandButton' data-todo-title-name = "${item.title}">
                         
-                        <h6>Todo: ${item.title}</h6>
+                    <div class = 'todoButtons'>
                         <button class = 'todoExpandButton' type = 'button' ></button>
                         <button class = 'todoDeleteButton'></button>
+                        <input class = 'todoCheckBox' type = "checkbox">
+                    </div>
+                    
+                        
+                        <p>Todo: ${item.title}</p>
+                        <p>Due: ${item.dueDate} </p>
+                        
                         
                     
                     </div>
@@ -66,7 +73,7 @@ if (storage !== null){
                         
                         <button class = 'editTodoDetails'></button>
                         <p> What: ${item.description} </p>
-                        <p> When: ${item.dueDate} </p>
+                        
                         <p> Priority: ${item.priority} </p>
                     </div>
                     

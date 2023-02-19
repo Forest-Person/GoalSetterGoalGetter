@@ -371,14 +371,31 @@ padding:1.5rem;
   .todoTitleAndExpandButton{
 
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     gap:.5rem;
     justify-content: center;
     align-items: center;
    
-    border-top: 2px solid black;
+   
+    border-top: 4px solid black;
 
 
+  }
+
+  input.todoCheckBox {
+
+    height:1.5rem;
+    width:1.5rem;
+  }
+
+  .todoButtons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap:1rem;
+    margin-top: 2rem !important;
+    
   }
 
   .todoInformation p{ 
@@ -386,6 +403,11 @@ padding:1.5rem;
     font-size: 1rem;
 
 
+  }
+
+  .todoRenderDiv {
+
+    margin-top: 2rem;
   }
   
   
