@@ -14,7 +14,7 @@ const addTodo = (projectName, nameOfTodo, descriptionOfTodo, dueDate, priority) 
         if (item.project === projectName){
              
             
-            item.todo.push({'title':nameOfTodo,'description':descriptionOfTodo, 'dueDate':formattedDate, 'priority':priority})
+            item.todo.push({'title':nameOfTodo,'description':descriptionOfTodo, 'dueDate':formattedDate, 'priority':priority,'status':false})
         }
 
     }
@@ -83,11 +83,31 @@ const editTodoListValue = (projectName, itemToUpdate, newValue) => {  /////Still
 
     localStorage.setItem('projectArray',JSON.stringify(projectArray)) 
 
+}
 
+const checkMarker = (projectName) => {
+
+    const projectArray = JSON.parse(localStorage.getItem('projectArray'))
+
+    for(let obj of projectArray){
+
+            if(obj.project === projectName){
+
+                
+                    console.log(obj.todo)
+                
+            }
+        
+        
+        
+
+    }
 
 
 }
-return { addTodo, editTodoListValue, deleteTodo }
+
+
+return { addTodo, editTodoListValue, deleteTodo, checkMarker }
 }
 
 

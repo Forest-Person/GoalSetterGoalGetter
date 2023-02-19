@@ -3,9 +3,12 @@ import { projectManager } from './projectManager';
 import { todoManager } from './todoManager'
 
 import { homePageRender } from './homePage';
-import { addProjectPopupForm } from './AddProjectFormPopup.js'
+import { addProjectPopupForm } from './AddProjectFormPopup'
+import { checkMarker } from './Checkmarker'
 
 
+
+checkMarker('poop','poop')
 
 
 
@@ -20,6 +23,8 @@ import { addProjectPopupForm } from './AddProjectFormPopup.js'
 
 
 homePageRender()
+
+
 
 
 
