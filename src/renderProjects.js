@@ -56,12 +56,15 @@ if (storage !== null){
                         
                         <h6>Todo: ${item.title}</h6>
                         <button class = 'todoExpandButton' type = 'button' ></button>
+                        <button class = 'todoDeleteButton'></button>
+                        
                     
                     </div>
 
                     
                     <div class = 'todoInformation' data-todo-title-name = "${item.title}" style = 'display:none;'>
-
+                        
+                        <button class = 'editTodoDetails'></button>
                         <p> What: ${item.description} </p>
                         <p> When: ${item.dueDate} </p>
                         <p> Priority: ${item.priority} </p>
