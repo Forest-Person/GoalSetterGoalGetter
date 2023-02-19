@@ -60,7 +60,7 @@ if (storage !== null){
                     </div>
 
                     
-                    <div class = 'todoInformation' data-todo-title-name = "${item.title}">
+                    <div class = 'todoInformation' data-todo-title-name = "${item.title}" style = 'display:none;'>
 
                         <p> What: ${item.description} </p>
                         <p> When: ${item.dueDate} </p>
