@@ -94,7 +94,11 @@ if (storage !== null){
             
            const targetDatasetProjectName = event.target.closest('.todoTitleAndExpandButton').dataset.todoTitleName
            const todoInformationtoHide = document.querySelector(`.todoInformation[data-todo-title-name = "${targetDatasetProjectName}"]`)
-            todoInformationtoHide.style.cssText = "display:none"
+            if(todoInformationtoHide.style.display !== 'none'){
+                todoInformationtoHide.style.display = 'none'
+            }else if(todoInformationtoHide.style.display !== 'block'){
+                todoInformationtoHide.style.display = 'block'
+            }
            console.log(todoInformationtoHide)
         }
 
