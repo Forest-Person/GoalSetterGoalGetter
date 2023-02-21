@@ -53,11 +53,12 @@ const renderEditProjectForm = (projectName)=>{
     
    projectWherePopupFormAppears.addEventListener('click',(event)=> {
 
-    const editProjectNameFormButtons =  document.querySelector('.editProjectInputValue').value
-    const editProjectDescription =  document.querySelector('.editProjectGoalValue').value
+    
 
     if(event.target.className === 'editProjectButtonPressed'){
 
+        const editProjectNameFormButtons =  document.querySelector('.editProjectInputValue').value
+    const editProjectDescription =  document.querySelector('.editProjectGoalValue').value
         const newProjectName = editProjectNameFormButtons
 
         project.editProjectListValues(projectName,'project',editProjectNameFormButtons)
@@ -74,6 +75,7 @@ const renderEditProjectForm = (projectName)=>{
     if (event.target.className === 'editCancelAddProjectButtonPressed'){
 
         projectWherePopupFormAppears.removeChild(document.querySelector('.editProjectPopupFormContainer'))
+        homePageRender()
     }
    })
 
