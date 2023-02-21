@@ -1,7 +1,9 @@
 
-const todoEditFormPopup = () => {
+const todoEditFormPopup = (todoDatasetTitle) => {
 
-    const editTodoPopupFormContainer = document.querySelector('.editTodoDetails')
+    const editTodoPopupFormContainer = document.querySelector(`.todoInformation[data-todo-title-name = "${todoDatasetTitle}"]`)
+    
+    if (editTodoPopupFormContainer === null){return}
 
 
 const addTodoFormHtmlString = `
@@ -10,7 +12,7 @@ const addTodoFormHtmlString = `
             
 
                 
-                <h1>Add Todo</h1>
+                <p style = "font-size:2rem; border-bottom:2px solid black;">Edit Todo</p>
                 
 
                 
@@ -40,7 +42,7 @@ const addTodoFormHtmlString = `
                         </div>
 
                         <div>
-                            <button type = 'button' class = 'submitEditTodoButton'>Add Todo</button>
+                            <button type = 'button' class = 'submitEditTodoButton'>Edit Todo</button>
                             <button type = 'button' class = 'cancelEditTodoButton'>Cancel</button>
                         </div>
 
@@ -49,9 +51,17 @@ const addTodoFormHtmlString = `
 
 
     `
+    if(document.querySelector('.todoPopupFormContainer')) { return
+    }else {editTodoPopupFormContainer.insertAdjacentHTML("afterend",addTodoFormHtmlString)}
+        
 
+
+    
+    
 
 }
+
+
 
 
 export { todoEditFormPopup }

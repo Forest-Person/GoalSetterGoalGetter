@@ -2,6 +2,7 @@
 import { deleteProject, projectManager } from './projectManager'
 import { checkMarker } from './Checkmarker'
 import { homePageRender } from './homePage'
+import { todoEditFormPopup } from './RenderEditTodoForm'
 
 
 const renderProjects = (storage) => {
@@ -66,17 +67,18 @@ if (storage !== null){
                         <p>Todo: ${item.title}</p>
                         <p>Due: ${item.dueDate} </p>
                         
-                        
+                        <button class = 'editTodoDetails'></button>
                     
                     </div>
 
                     
                     <div class = 'todoInformation' data-todo-title-name = "${item.title}" style = 'display:none;'>
                         
-                        <button class = 'editTodoDetails'></button>
+                        
                         <p> What: ${item.description} </p>
                         
                         <p> Priority: ${item.priority} </p>
+                        
                     </div>
                     
                 
@@ -87,7 +89,7 @@ if (storage !== null){
                 const individualProjectRender = document.querySelector('.individualProjectContainer')
                 individualProjectRender.insertAdjacentHTML('beforeend',todoItemHtmlString)
                 const todoCheck = document.querySelector(`.todoCheckBox[data-todo-title-name = "${item.title}"]`)
-                todoCheck.checked = item.status
+                todoCheck.checked = item.status //make the checkbox checked based on value of status as true or false
                 
                 
                 
@@ -107,6 +109,7 @@ if (storage !== null){
         if(event.target.className === 'todoExpandButton'){
             
            const targetDatasetProjectName = event.target.closest('.todoTitleAndExpandButton').dataset.todoTitleName
+           
            const todoInformationtoHide = document.querySelector(`.todoInformation[data-todo-title-name = "${targetDatasetProjectName}"]`)
             if(todoInformationtoHide.style.display !== 'none'){
                 todoInformationtoHide.style.display = 'none'
@@ -132,6 +135,21 @@ if (storage !== null){
                 nearestProjectParentContainer.remove()
             }
 
+            if (event.target.className === 'editTodoDetails'){//gets proper todoInformation div to add popup to and calls todoeditpopup
+
+
+                const nearestTodoParentContainer = event.target.closest('.todoTitleAndExpandButton')
+                const nearestDatasetTitle = nearestTodoParentContainer.dataset.todoTitleName
+                
+                
+                todoEditFormPopup(nearestDatasetTitle)
+              }
+            if(event.target.className === 'cancelEditTodoButton'){
+              const nearestProjectParentContainer = event.target.closest('.todoRenderDiv')
+              const todoFormToRemove = document.querySelector('.todoPopupFormContainer')
+              nearestProjectParentContainer.removeChild(todoFormToRemove)
+            
+            }
             
         })
 
