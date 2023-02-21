@@ -1,5 +1,9 @@
+import { homePageRender } from './homePage'
+import { editTodoListValue, todoManager } from './todoManager'
 
 const todoEditFormPopup = (todoDatasetTitle) => {
+
+   const todo = todoManager()
 
     const editTodoPopupFormContainer = document.querySelector(`.todoInformation[data-todo-title-name = "${todoDatasetTitle}"]`)
     
@@ -52,9 +56,40 @@ const addTodoFormHtmlString = `
 
     `
     if(document.querySelector('.todoPopupFormContainer')) { return
-    }else {editTodoPopupFormContainer.insertAdjacentHTML("afterend",addTodoFormHtmlString)}
+        }else {editTodoPopupFormContainer.insertAdjacentHTML("afterend",addTodoFormHtmlString)}
         
 
+    const todoFormContainer = document.querySelector('.todoPopupFormContainer')
+
+    todoFormContainer.addEventListener('click', (event)=> { //get values of all edit todo inputs
+
+        if (event.target.className === 'submitEditTodoButton') {
+
+            
+           const todoName = document.querySelector('.todoName').value
+           const todoDescription = document.querySelector('.todoDescription').value
+           const todoDueDate = document.querySelector('.todoDueDate').value
+           const todoPrioritySelection = document.querySelector('.todoPrioritySelection').value
+           
+           const formContainer = document.querySelector('.individualProjectContainer')
+           const nearestFormProjectName = editTodoPopupFormContainer.closest('.individualProjectContainer')
+           const nearestFormContainerProjectName = nearestFormProjectName.dataset.projectName
+           
+           
+           todo.editTodoListValue(nearestFormContainerProjectName,'title',todoName)
+           todo.editTodoListValue(nearestFormContainerProjectName,'dueDate',todoDueDate)
+           todo.editTodoListValue(nearestFormContainerProjectName,'description',todoDescription)
+           todo.editTodoListValue(nearestFormContainerProjectName,'priority',todoPrioritySelection)
+
+           homePageRender()
+
+           
+        }
+
+
+    })
+
+    const listOfInput = document.querySelectorAll('.todoPopupFormContainer')
 
     
     

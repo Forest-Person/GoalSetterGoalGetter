@@ -1,4 +1,5 @@
 import { format } from "date-fns"
+import { parseISO } from 'date-fns' 
 
 
 const todoManager = () => {
@@ -52,12 +53,14 @@ const deleteTodo = (projectName, todoToDelete) => {
 
 const editTodoListValue = (projectName, itemToUpdate, newValue) => {  /////Still need to deal with updates to the date field
 
-   
+    
 
     if(itemToUpdate === 'dueDate'){
-
-    const dateDue =new Date(newValue)
-    const formattedDate = format(dateDue,'MM/dd/yyyy')  //using date-fns to format the date for a human readable format
+        
+        const dateDue = new Date(newValue)
+    
+   
+    const formattedDate = format(dateDue,'MM-dd-yyyy')  //using date-fns to format the date for a human readable format
     newValue = formattedDate
     }
 
