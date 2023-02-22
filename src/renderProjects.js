@@ -3,13 +3,14 @@ import { deleteProject, projectManager } from './projectManager'
 import { checkMarker } from './Checkmarker'
 import { homePageRender } from './homePage'
 import { todoEditFormPopup } from './RenderEditTodoForm'
+import { todoManager } from './todoManager'
 
 
 const renderProjects = (storage) => {
     
 
     const project = projectManager()
-    
+    const todo = todoManager()
    
 
 if (storage !== null){
@@ -165,6 +166,20 @@ if (storage !== null){
               const todoFormToRemove = document.querySelector('.todoPopupFormContainer')
               nearestProjectParentContainer.removeChild(todoFormToRemove)
             
+            }
+
+            if(event.target.className === 'todoDeleteButton'){
+
+                if(!null){
+                    confirm("Delete this todo?")
+                    const nearestProjectNameData = event.target.closest(".individualProjectContainer").dataset.projectName
+                    const nearestTitleData = event.target.closest('.todoRenderDiv').dataset.todoTitleName   
+                    todo.deleteTodo(nearestProjectNameData,nearestTitleData)
+                    homePageRender()
+
+
+                }
+                
             }
             
         })
