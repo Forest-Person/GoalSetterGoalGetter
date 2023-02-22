@@ -53,7 +53,7 @@ if (storage !== null){
 
                 const todoItemHtmlString = `
                 
-                <div class = 'todoRenderDiv'  >
+                <div class = "todoRenderDiv" data-todo-title-name = "${item.title}"  >
                 
                     <div class = 'todoTitleAndExpandButton' data-todo-title-name = "${item.title}">
                         
@@ -90,6 +90,22 @@ if (storage !== null){
                 individualProjectRender.insertAdjacentHTML('beforeend',todoItemHtmlString)
                 const todoCheck = document.querySelector(`.todoCheckBox[data-todo-title-name = "${item.title}"]`)
                 todoCheck.checked = item.status //make the checkbox checked based on value of status as true or false
+                
+                if (todoCheck.checked === true){
+                    
+                    const nearestTodoDiv = document.querySelectorAll(`.todoRenderDiv[data-todo-title-name = "${item.title}"] p`)
+    
+                    nearestTodoDiv.forEach((item) => {item.style.cssText = "text-decoration:line-through; text-decoration-thickness:4px;"})}
+                
+                if(todoCheck.checked === false){
+                    
+                    const nearestTodoDiv = document.querySelectorAll(`.todoRenderDiv[data-todo-title-name = "${item.title}"] p`)
+    
+                    nearestTodoDiv.forEach((item) => {item.style.cssText = "text-decoration:none;"})
+
+
+
+                }
                 
                 
                 

@@ -20,16 +20,20 @@ const checkMarker = (projectName, todoName) => {
        const todoIndex =  projectArray[index].todo.findIndex((key)=>{return key.title === todoName})
     
        
-   if(projectArray[index].todo[todoIndex].status === false){
+   if(projectArray[index].todo[todoIndex].status === false){ //change checkbox values true or falce checked or not checked depending on value of todo.status
     projectArray[index].todo[todoIndex].status = true
     modifyCheckBoxCheck.checked = true
+    const nearestTodoDiv = document.querySelectorAll(`.todoRenderDiv[data-todo-title-name = "${todoName}"] p`)
     
+    nearestTodoDiv.forEach((item) => {item.style.cssText = "text-decoration:line-through; text-decoration-thickness:4px;"})
     
    }else if(projectArray[index].todo[todoIndex].status === true){
 
     projectArray[index].todo[todoIndex].status = false
    modifyCheckBoxCheck.checked = false
+   const nearestTodoDiv = document.querySelectorAll(`.todoRenderDiv[data-todo-title-name = "${todoName}"] p`)
     
+   nearestTodoDiv.forEach((item) => {item.style.cssText = "text-decoration:none; "})
 
    }
    
